@@ -20,13 +20,13 @@ const countLetters = function(string) {
       // If the current char is not in the results object, add the char to the results object with a value of 1.
       if (!results[char]) {
         results[char] = 1;
-      } else if (results[char]) {
+      } else {
         // If the current char is already in the results object, increment value by 1.
         results[char] ++;
       }
     }
   }
-// Return the results object.
+  // Return the results object.
   return results;
 };
 
