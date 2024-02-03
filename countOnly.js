@@ -19,7 +19,7 @@ const countOnly = function(allItems, itemsToCount) {
     if (itemsToCount[item]) {
       // Check if the current item is already a key(entered) in results.
       if (!results[item]) {
-        // If the current item is not add the item to the results object with a value of 1.
+        // If the current item is not in the results object, add the item to the results object with a value of 1.
         results[item] = 1;
       } else if (results[item]) {
         // If the current item is already in the results object, increment value by 1.
