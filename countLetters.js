@@ -11,10 +11,8 @@ const assertEqual = function(actual, expected) {
 const countLetters = function(string) {
 // Create an empty results object to hold the letter(key), and number of times that letter is used(value).
   const results = {};
-  // Create a variable to hold all letters in string converted to lower case letters.
-  const lowerCaseString = string.toLowerCase();
-  // Use for of loop to iterate through all characters in lowerCaseString variable.
-  for (let char of lowerCaseString) {
+  // Use for of loop to iterate through all characters in string  in countLetters variable.
+  for (let char of string) {
     // Conditional states if character in lowerCaseString is not a space continue through conditional statements.
     if (char !== " ") {
       // If the current char is not in the results object, add the char to the results object with a value of 1.
@@ -31,7 +29,7 @@ const countLetters = function(string) {
 };
 
 const resultsObject = countLetters('Who who who stole my chevy');
-assertEqual(resultsObject["w"], 3);
+assertEqual(resultsObject["w"], 2);
 assertEqual(resultsObject["s"], 1);
 assertEqual(resultsObject["e"], 2);
 assertEqual(resultsObject["f"], undefined);
