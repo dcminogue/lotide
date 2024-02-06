@@ -38,18 +38,18 @@ const map = function(array, callback) {
   return results;
 };
 
-
 const results1 = map(words, word => word[0]);
 console.log(results1);
-assertArraysEqual(words, results1);
+assertArraysEqual(results1, ["g", "c", "t", "m", "t"]);
 
 const result2 = map(letters, letter => letter[0]);
 console.log(result2);
-assertArraysEqual(letters, result2);
+assertArraysEqual(result2, ["a", "b", "c", "d"] );
 
 const result3 = map(numbers, number => number[0]);
 console.log(result3);
-assertArraysEqual(numbers, result3);
+assertArraysEqual(result3, ["1", "2", "3", "4", "5"]);
+
 const result4 = map(digits, digit => digit[3]);
 console.log(result4);
-assertArraysEqual(digits, result4);
+assertArraysEqual(result4, ["7"] );
