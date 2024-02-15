@@ -12,4 +12,3 @@ assertEqual(tail([]).length, 0) // tail of an empty array should also be empty
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words);
 assertEqual(words.length, 3); // original array should still have 3 elements!
-return tail;
