@@ -27,4 +27,11 @@ describe("#head", () => {
     assert.strictEqual(head(1, 2, 3), undefined);
   });
 
+  it("should make sure the original array was not altered by the head function", () => {
+    const words = ["hello", "world", "lighthouse", "hello"];
+    const result = head(words);
+    assert.strictEqual(result, "hello");
+    assert.strictEqual(words.length, 4);
+  });
+
 });
