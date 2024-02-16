@@ -28,6 +28,8 @@ const countLetters = function(string) {
   return results;
 };
 
+module.exports = countLetters;
+
 const resultsObject = countLetters('Who who who stole my chevy');
 assertEqual(resultsObject["w"], 2);
 assertEqual(resultsObject["s"], 1);

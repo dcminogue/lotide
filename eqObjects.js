@@ -48,6 +48,8 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
+module.exports = eqObjects;
+
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };
 // Uses assertEqual function to check that eqObjects actual return = expected return.

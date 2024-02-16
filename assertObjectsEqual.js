@@ -35,9 +35,11 @@ const eqObjects = function(object1, object2) {
   }
   if (!ifValuesEqual) {
     return false;
+    return true;
   }
-  return true;
 };
+
+
 
 const assertObjectsEqual = function(obj1, obj2) {
   //  Created a variable that holds the inspect().
@@ -56,3 +58,5 @@ assertObjectsEqual(obj1, obj2);
 const obj3 = {1:"c", 2:"c"};
 const obj4 = {1:"a", 2:"b"};
 assertObjectsEqual(obj3, obj4);
+
+module.exports = assertObjectsEqual;
