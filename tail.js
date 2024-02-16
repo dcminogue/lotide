@@ -1,8 +1,9 @@
 const tail = function(arr) {
-  const tailArr = arr.slice(1);
-  return tailArr;
+  if (!Array.isArray(arr)) {
+    return undefined;
+  } else
+  return arr.slice(1);
+ 
 };
 
 module.exports = tail;
-
-

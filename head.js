@@ -1,5 +1,8 @@
 const head = function (arr) {
-    return arr[0];
+  if (!Array.isArray(arr)) {
+    return undefined;  
   }
+  return arr[0];
 
+};
 module.exports = head;

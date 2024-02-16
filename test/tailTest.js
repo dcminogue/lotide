@@ -1,14 +1,31 @@
-const assertEqual = require(`../assertEqual`);
+const assert = require('chai').assert;
 const tail = require(`../tail`);
 
+describe("#tail", () => {
+  it("should return an array of [2, 3] when the input array is [1, 2, 3]", () => {
+    assert.deepEqual(tail([1, 2, 3]), [2, 3]);
+  });
 
-// TEST CODE
-const result = tail(["Hello" , "Lighthouse" , "Labs"]);
-assertEqual(result.length, 2);
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
-assertEqual(tail(["test"]).length, 0) // tail of array with one element only should be empty
-assertEqual(tail([]).length, 0) // tail of an empty array should also be empty
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3); // original array should still have 3 elements!
+  it("should return an array of ['Lighthouse', 'Labs'] when the input array is ['Hello' , 'Lighthouse' , 'Labs']", () => {
+    assert.deepEqual(tail(["Hello" , "Lighthouse" , "Labs"]), ["Lighthouse" , "Labs"]);
+  });
+
+  it("should return an empty array when the input array only has one item. eg['Only One Item'].", () => {
+    assert.deepEqual(tail(["Only One Item"]), []);
+  });
+  
+  it("should return an empty array when the input array is empty [].", () => {
+    assert.deepEqual(tail([]), []);
+  });
+  
+  it("should return undefined when the input is an object.", () => {
+    assert.deepEqual(tail({}), undefined);
+  });
+
+  it("should return undefined when the input is number.", () => {
+    assert.deepEqual(tail(1), undefined);
+  });
+
+});
+
+
