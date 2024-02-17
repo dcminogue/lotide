@@ -1,8 +1,8 @@
 {
   "name": "lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "A function library published for learning purposes.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/dcminogue/lotide.git"
   },
-  "author": "",
+  "author": "danminogue_31788",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dcminogue/lotide/issues"
